@@ -15,6 +15,7 @@ class CreateExistenciasTable extends Migration
     {
         Schema::create('existencias', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('existencia');
             $table->timestamps();
         });
     }

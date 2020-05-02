@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use Illuminate\Support\Str as Str;
 
 class CategoriasTableSeeder extends Seeder
 {
@@ -11,13 +13,15 @@ class CategoriasTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categorias')->insert(array(
-            'nombre' => 'categoria'
-            
-        ));
+        $faker = Faker::create();
+ 
+        for($i = 1; $i<=30; $i++){
+ 
+            \DB::table('categorias')->insert([
+                'nombre' => 'Categoria'.$i,
+                
+            ]);
+        }
 
-        DB::table('categorias')->insert(array(
-            'nombre' => 'Nueva Categoria',
-        ));
     }
 }

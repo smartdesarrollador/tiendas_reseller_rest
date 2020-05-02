@@ -15,6 +15,12 @@ class CreateRepartidoresTable extends Migration
     {
         Schema::create('repartidores', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->integer('telefono');
+            $table->string('correo');
+            $table->string('direccion');
+            $table->string('imagen');
             $table->timestamps();
         });
     }

@@ -18,3 +18,4 @@ class Producto extends Model
         return $this->belongsTo('App\Categoria','categorias_id','id');
     }
 }
+

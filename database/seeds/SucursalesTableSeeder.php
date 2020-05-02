@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use Illuminate\Support\Str as Str;
 
 class SucursalesTableSeeder extends Seeder
 {
@@ -12,5 +14,14 @@ class SucursalesTableSeeder extends Seeder
     public function run()
     {
         //
+        $faker = Faker::create();
+ 
+        for($i = 1; $i<=30; $i++){
+ 
+            \DB::table('sucursales')->insert([
+                'descripcion' => $faker->paragraph(),
+                'direccion' => $faker->address(),  
+            ]);
+        }
     }
 }

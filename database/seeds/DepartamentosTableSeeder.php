@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use Illuminate\Support\Str as Str;
 
 class DepartamentosTableSeeder extends Seeder
 {
@@ -12,5 +14,15 @@ class DepartamentosTableSeeder extends Seeder
     public function run()
     {
         //
+        $faker = Faker::create();
+ 
+        for($i = 1; $i<=30; $i++){
+ 
+            \DB::table('departamentos')->insert([
+                'nombre' => $faker->city(),   
+            ]);
+        }
+        
+
     }
 }

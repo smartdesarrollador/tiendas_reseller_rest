@@ -15,6 +15,8 @@ class CreateSucursalesTable extends Migration
     {
         Schema::create('sucursales', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('descripcion');
+            $table->string('direccion');
             $table->timestamps();
         });
     }

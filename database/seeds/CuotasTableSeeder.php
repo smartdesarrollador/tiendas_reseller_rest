@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use Illuminate\Support\Str as Str;
 
 class CuotasTableSeeder extends Seeder
 {
@@ -12,5 +14,14 @@ class CuotasTableSeeder extends Seeder
     public function run()
     {
         //
+        $faker = Faker::create();
+ 
+        for($i = 1; $i<=30; $i++){
+ 
+            \DB::table('cuotas')->insert([
+                'cantidad' => $faker->numberBetween(1,10),
+             
+            ]);
+        }
     }
 }

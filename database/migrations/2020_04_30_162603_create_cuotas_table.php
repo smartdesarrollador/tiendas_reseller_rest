@@ -15,6 +15,7 @@ class CreateCuotasTable extends Migration
     {
         Schema::create('cuotas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }

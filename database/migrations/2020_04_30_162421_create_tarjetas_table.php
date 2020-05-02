@@ -15,6 +15,7 @@ class CreateTarjetasTable extends Migration
     {
         Schema::create('tarjetas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('tipo_tarjeta');
             $table->timestamps();
         });
     }
