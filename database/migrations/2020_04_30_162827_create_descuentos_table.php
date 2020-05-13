@@ -15,6 +15,7 @@ class CreateDescuentosTable extends Migration
     {
         Schema::create('descuentos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->decimal('descuento');
             $table->timestamps();
         });
     }

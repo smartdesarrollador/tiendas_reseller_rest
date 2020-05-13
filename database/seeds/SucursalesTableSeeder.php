@@ -21,6 +21,7 @@ class SucursalesTableSeeder extends Seeder
             \DB::table('sucursales')->insert([
                 'descripcion' => $faker->paragraph(),
                 'direccion' => $faker->address(),  
+                'tiendas_id' => $faker->numberBetween(1,30),
             ]);
         }
     }

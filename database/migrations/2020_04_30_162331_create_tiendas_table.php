@@ -15,7 +15,14 @@ class CreateTiendasTable extends Migration
     {
         Schema::create('tiendas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
+            $table->string('direccion');
             $table->timestamps();
+            $table->unsignedBigInteger('distritos_id');
+            
+            $table->foreign('distritos_id')->references('id')->on('distritos');
+
+
         });
     }
 

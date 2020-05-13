@@ -15,7 +15,14 @@ class CreateProvinciasTable extends Migration
     {
         Schema::create('provincias', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
             $table->timestamps();
+            $table->unsignedBigInteger('departamentos_id');
+
+            $table->foreign('departamentos_id')->references('id')->on('departamentos');
+            
+
+
         });
     }
 

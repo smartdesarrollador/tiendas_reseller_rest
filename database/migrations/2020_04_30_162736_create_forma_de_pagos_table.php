@@ -15,6 +15,7 @@ class CreateFormaDePagosTable extends Migration
     {
         Schema::create('forma_de_pagos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
             $table->timestamps();
         });
     }

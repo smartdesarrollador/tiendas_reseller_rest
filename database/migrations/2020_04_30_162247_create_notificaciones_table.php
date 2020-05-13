@@ -15,6 +15,10 @@ class CreateNotificacionesTable extends Migration
     {
         Schema::create('notificaciones', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('remitente');
+            $table->string('destinatario');
+            $table->string('asunto');
+            $table->text('mensaje');
             $table->timestamps();
         });
     }

@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CategoriasTableSeeder::class,
-            ProductosTableSeeder::class,
             MarcasTableSeeder::class,
             RubrosTableSeeder::class,
             UnidadesDeMedidasTableSeeder::class,
@@ -23,12 +22,27 @@ class DatabaseSeeder extends Seeder
             EstadosDePedidosTableSeeder::class,
             RepartidoresTableSeeder::class,
             MonedasTableSeeder::class,
+            FormaDePagosTableSeeder::class,
+            DescuentosTableSeeder::class,
             CuotasTableSeeder::class,
             TarjetasTableSeeder::class,
             DepartamentosTableSeeder::class,
             PromocionesTableSeeder::class,
-            SucursalesTableSeeder::class,
             RolesTableSeeder::class,
+            NotificacionesTableSeeder::class,
+            ProductosTableSeeder::class,
+            ProvinciasTableSeeder::class,
+            DistritosTableSeeder::class,
+            ClientesTableSeeder::class,
+            UsuariosTableSeeder::class,
+            TiendasTableSeeder::class,
+            SucursalesTableSeeder::class,
+            EmpresariosTableSeeder::class,
+            PedidosTableSeeder::class,
+            DetallePedidosTableSeeder::class,
+
+
+        
         ]);
     }
 }

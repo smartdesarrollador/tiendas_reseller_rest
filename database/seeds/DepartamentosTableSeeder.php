@@ -16,7 +16,7 @@ class DepartamentosTableSeeder extends Seeder
         //
         $faker = Faker::create();
  
-        for($i = 1; $i<=30; $i++){
+        for($i = 1; $i<=15; $i++){
  
             \DB::table('departamentos')->insert([
                 'nombre' => $faker->city(),   

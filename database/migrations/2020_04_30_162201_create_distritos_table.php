@@ -15,7 +15,15 @@ class CreateDistritosTable extends Migration
     {
         Schema::create('distritos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
+            $table->decimal('costo_envio');
             $table->timestamps();
+            $table->unsignedBigInteger('provincias_id');
+        
+            $table->foreign('provincias_id')->references('id')->on('provincias');
+           
+
+
         });
     }
 

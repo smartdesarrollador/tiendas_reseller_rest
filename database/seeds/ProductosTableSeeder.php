@@ -23,6 +23,10 @@ class ProductosTableSeeder extends Seeder
                 'precio' => $faker->numberBetween(1,1000),
                 'imagen' => $faker->imageUrl($width = 640, $height = 480),
                 'categorias_id' => $faker->numberBetween(1,30),
+                'rubros_id' => $faker->numberBetween(1,10),
+                'marcas_id' => $faker->numberBetween(1,10),
+                'unidades_de_medidas_id' => $faker->numberBetween(1,10),
+                'existencias_id' => $faker->numberBetween(1,2),
                 
             ]);
         }
