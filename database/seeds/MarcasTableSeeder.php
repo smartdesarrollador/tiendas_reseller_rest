@@ -15,8 +15,10 @@ class MarcasTableSeeder extends Seeder
     {
         //
         $faker = Faker::create();
+        
  
         for($i = 1; $i<=30; $i++){
+
  
             \DB::table('marcas')->insert([
                 'nombre' => 'Marca'.$i,

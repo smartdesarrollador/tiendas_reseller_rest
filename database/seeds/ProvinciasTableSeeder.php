@@ -18,6 +18,7 @@ class ProvinciasTableSeeder extends Seeder
         $faker = Faker::create();
  
         for($i = 1; $i<=70; $i++){
+
  
             \DB::table('provincias')->insert([
                 'nombre' => $faker->cityPrefix(),

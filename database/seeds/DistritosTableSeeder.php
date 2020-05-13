@@ -16,8 +16,11 @@ class DistritosTableSeeder extends Seeder
         //
 
         $faker = Faker::create();
+
+        $carbon = new \Carbon\Carbon();
  
         for($i = 1; $i<=100; $i++){
+
  
             \DB::table('distritos')->insert([
                 'nombre' => $faker->citySuffix(),

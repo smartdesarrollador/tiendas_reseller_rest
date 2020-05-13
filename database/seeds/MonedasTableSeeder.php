@@ -17,6 +17,7 @@ class MonedasTableSeeder extends Seeder
         $faker = Faker::create();
  
         for($i = 1; $i<=30; $i++){
+
  
             \DB::table('monedas')->insert([
                 'moneda' => $faker->currencyCode(),
