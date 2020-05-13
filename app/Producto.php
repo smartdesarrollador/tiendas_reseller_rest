@@ -9,9 +9,9 @@ class Producto extends Model
     
     protected $table = "productos";
 
-    protected $fillable = ["id","nombre","descripcion","precio","imagen","categorias_id"];
-
-    protected $hidden = ["created_at","updated_at"];
+    protected $fillable = ["id","nombre","descripcion","precio","imagen",
+                            "created_at","updated_at","categorias_id",
+                            "rubros_id","marcas_id","unidades_de_medidas_id","existencias_id"];
 
     public function categoria()
     {
